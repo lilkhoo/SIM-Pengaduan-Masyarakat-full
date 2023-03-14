@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,10 @@
 
     <title>Laporan Pengaduan</title>
 </head>
+
 <body>
     <div class="text-center">
         <h5>Laporan Pengaduan Masyarakat</h5>
-        <h6>Ihsanfrr.githu.io</h6>
     </div>
     <div class="container">
         <table class="table">
@@ -38,4 +39,5 @@
         </table>
     </div>
 </body>
+
 </html>

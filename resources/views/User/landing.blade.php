@@ -44,8 +44,8 @@
                                     <a class="nav-link ml-3 text-white" href="{{ route('pekat.laporan') }}">Laporan</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link ml-3 text-white" href="{{ route('pekat.logout') }}"
-                                        style="text-decoration: underline">{{ Auth::guard('masyarakat')->user()->nama }}</a>
+                                    <a class="nav-link ml-3 text-white"
+                                        href="{{ route('pekat.logout') }}">{{ Auth::guard('masyarakat')->user()->nama }}</a>
                                 </li>
                             </ul>
                         @else
@@ -148,7 +148,6 @@
             <div class="modal-body">
                 <h3 class="mt-3 text-center">Masuk terlebih dahulu</h3>
                 <p class="text-center">Silahkan masuk menggunakan akun yang sudah didaftarkan.</p>
-                <label class="text-center">Gunakan Akun Media Sosial Anda</label>
                 <div class="row">
                     <div class="col">
                         <a href="{{ route('pekat.auth', 'facebook') }}" class="btn btn-facebook mb-2"><i

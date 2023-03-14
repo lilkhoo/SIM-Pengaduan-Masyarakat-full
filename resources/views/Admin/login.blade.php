@@ -18,7 +18,6 @@
             width: 100%;
             color: #fff;
         }
-
     </style>
 
     <title>Halaman Masuk Petugas</title>
@@ -28,7 +27,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5">
-                <h2 class="text-center text-white mb-0 mt-5">PEKAT</h2>
+                <h2 class="text-center text-white mb-0 mt-5">PEMAS</h2>
                 <P class="text-center text-white mb-5">Pengaduan Masyarakat</P>
                 <div class="card mt-5">
                     <div class="card-body">
@@ -45,7 +44,7 @@
                         </form>
                     </div>
                 </div>
-                
+
                 <a href="{{ route('pekat.index') }}" class="btn btn-warning text-white mt-3" style="width: 100%">Kembali
                     ke Halaman Utama</a>
             </div>

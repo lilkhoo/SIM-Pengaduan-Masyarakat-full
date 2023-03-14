@@ -68,7 +68,7 @@
                                     <form action="{{ route('masyarakat.destroy', $masyarakat->nik) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" style="width: 100%" onclick="return confirm('APAKAH YAKIN?')">HAPUS</button>
+                                        <button type="submit" class="btn btn-danger" style="width: 100%" onclick="return confirm('Yakin ingin menghapus data?')">HAPUS</button>
                                     </form>
                                 </td>
                             </tr>

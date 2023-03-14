@@ -22,8 +22,8 @@ class CreateTanggapansTable extends Migration
 
             $table->timestamps();
 
-            $table->foreign('id_pengaduan')->references('id_pengaduan')->on('pengaduan');
-            $table->foreign('id_petugas')->references('id_petugas')->on('petugas');
+            $table->foreign('id_pengaduan')->references('id_pengaduan')->on('pengaduan')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('id_petugas')->references('id_petugas')->on('petugas')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 

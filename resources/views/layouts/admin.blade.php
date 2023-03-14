@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        
+    <link rel="shortcut icon" href="{{ asset('images/wikrama-logo.png') }}">
+
     @yield('css')
 
     <style>
@@ -28,7 +29,7 @@
     </style>
 
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
-    
+
 </head>
 
 <body>
@@ -36,34 +37,34 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3 class="mb-0">PEKAT</h3>
+                <h3 class="mb-0">PEMAS</h3>
                 <p class="text-white mb-0">Pengaduan Masyarakat</p>
             </div>
 
             <ul class="list-unstyled components">
                 @if (Auth::guard('admin')->user()->level == 'admin')
-                <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
-                    <a href="{{ route('dashboard.index') }}">Dashboard</a>
-                </li>
-                <li class="{{ Request::is('admin/pengaduan') ? 'active' : '' }}">
-                    <a href="{{ route('pengaduan.index') }}">Pengaduan</a>
-                </li>
-                <li class="{{ Request::is('admin/petugas') ? 'active' : '' }}">
-                    <a href="{{ route('petugas.index') }}">Petugas</a>
-                </li>
-                <li class="{{ Request::is('admin/masyarakat') ? 'active' : '' }}">
-                    <a href="{{ route('masyarakat.index') }}">Masyarakat</a>
-                </li>
-                <li class="{{ Request::is('admin/laporan') ? 'active' : '' }}">
-                    <a href="{{ route('laporan.index') }}">Laporan</a>
-                </li>
+                    <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard.index') }}">Dashboard</a>
+                    </li>
+                    <li class="{{ Request::is('admin/pengaduan') ? 'active' : '' }}">
+                        <a href="{{ route('pengaduan.index') }}">Pengaduan</a>
+                    </li>
+                    <li class="{{ Request::is('admin/petugas') ? 'active' : '' }}">
+                        <a href="{{ route('petugas.index') }}">Petugas</a>
+                    </li>
+                    <li class="{{ Request::is('admin/masyarakat') ? 'active' : '' }}">
+                        <a href="{{ route('masyarakat.index') }}">Masyarakat</a>
+                    </li>
+                    <li class="{{ Request::is('admin/laporan') ? 'active' : '' }}">
+                        <a href="{{ route('laporan.index') }}">Laporan</a>
+                    </li>
                 @elseif(Auth::guard('admin')->user()->level == 'petugas')
-                <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
-                    <a href="{{ route('dashboard.index') }}">Dashboard</a>
-                </li>
-                <li class="{{ Request::is('admin/pengaduan') ? 'active' : '' }}">
-                    <a href="{{ route('pengaduan.index') }}">Pengaduan</a>
-                </li>
+                    <li class="{{ Request::is('admin/dashboard') ? 'active' : '' }}">
+                        <a href="{{ route('dashboard.index') }}">Dashboard</a>
+                    </li>
+                    <li class="{{ Request::is('admin/pengaduan') ? 'active' : '' }}">
+                        <a href="{{ route('pengaduan.index') }}">Pengaduan</a>
+                    </li>
                 @endif
             </ul>
         </nav>
@@ -87,7 +88,8 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
-                            <a href="{{ route('admin.logout') }}" class="btn btn-white btn-sm">{{ Auth::guard('admin')->user()->nama_petugas }}</a>
+                            <a href="{{ route('admin.logout') }}"
+                                class="btn btn-white btn-sm">{{ Auth::guard('admin')->user()->nama_petugas }}</a>
                         </ul>
                     </div>
                 </div>
@@ -105,16 +107,15 @@
     </script>
 
     <script>
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
                 $(this).toggleClass('active');
             });
         });
-
     </script>
 
     @yield('js')
-    </body>
+</body>
 
 </html>
